@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EWS1 – Expert External Wall System fire safety assessment, consultancy and remediation advice across the UK. Get your EWS1 certificate fast." />
+  <meta name="keywords" content="EWS1, external wall system, fire safety assessment, EWS1 certificate, cladding assessment, UK fire safety, EWS1 form, building safety" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="EWS1 – UK External Wall System Fire Safety Experts" />
+  <meta property="og:description" content="Expert EWS1 assessments, consultancy and guidance for residential buildings across the UK." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ews1.co.uk" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EWS1 – UK Fire Safety Experts" />
+  <meta name="twitter:description" content="Expert EWS1 assessments and consultancy across the UK." />
+  <link rel="canonical" href="https://ews1.co.uk" />
+  <title>EWS1 – External Wall System Fire Safety Experts | UK</title>
+
+  <!-- Schema.org structured data for EEAT -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "EWS1",
+    "url": "https://ews1.co.uk",
+    "description": "UK-based experts in External Wall System (EWS1) fire safety assessments, cladding surveys and building safety consultancy.",
+    "areaServed": "United Kingdom",
+    "serviceType": ["Fire Safety Assessment", "EWS1 Certification", "Cladding Survey", "Building Safety Consultancy"],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "RICS Qualified Fire Safety Assessors"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a1628;
+      --blue: #1a3a6b;
+      --mid-blue: #2256a8;
+      --accent: #2e7df7;
+      --light-blue: #ddeeff;
+      --sky: #f0f6ff;
+      --white: #ffffff;
+      --grey: #f4f7fc;
+      --text: #1a1f2e;
+      --muted: #5a6478;
+      --border: #d0ddf0;
+      --gold: #e8a020;
+      --success: #16a34a;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --shadow-sm: 0 2px 8px rgba(10,22,40,0.08);
+      --shadow-md: 0 8px 32px rgba(10,22,40,0.12);
+      --shadow-lg: 0 20px 60px rgba(10,22,40,0.16);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10, 22, 40, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--white) !important;
+      padding: 0.55rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+
+    .nav-cta:hover { background: #1a6de0 !important; transform: translateY(-1px); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none;
+    }
+
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 5%; }
+    .page-hero { padding-top: 150px; padding-bottom: 80px; }
+
+    /* ── HERO ── */
+    #home {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, #1a4080 100%);
+      position: relative; overflow: hidden;
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: 70px;
+    }
+
+    #home::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(46,125,247,0.18) 0%, transparent 60%),
+                  url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 700px;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(46,125,247,0.15);
+      border: 1px solid rgba(46,125,247,0.3);
+      color: #90bfff;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge::before { content: '🏛️'; }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -1px;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+      position: relative;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: none; cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(46,125,247,0.4);
+    }
+
+    .btn-primary:hover { background: #1a6de0; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(46,125,247,0.5); }
+
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+
+    .hero-stats {
+      display: flex; gap: 3rem; margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      flex-wrap: wrap;
+    }
+
+    .stat-item {}
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-num span { color: var(--accent); }
+    .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--grey);
+      padding: 1.5rem 5%;
+      display: flex; align-items: center; justify-content: center; gap: 3rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.88rem; font-weight: 600; color: var(--blue);
+    }
+
+    .trust-icon { font-size: 1.2rem; }
+
+    /* ── SECTION TITLES ── */
+    .section-tag {
+      display: inline-block;
+      background: var(--light-blue);
+      color: var(--mid-blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .section-lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .text-center { text-align: center; }
+    .text-center .section-lead { margin-left: auto; margin-right: auto; }
+
+    /* ── SERVICES ── */
+    #services { background: var(--sky); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--mid-blue));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      width: 52px; height: 52px;
+      background: var(--light-blue);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+
+    .service-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      color: var(--accent); font-weight: 600; font-size: 0.88rem;
+      text-decoration: none; margin-top: 1rem;
+      transition: gap 0.2s;
+    }
+
+    .service-link:hover { gap: 10px; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+
+    .about-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(46,125,247,0.3) 0%, transparent 60%);
+    }
+
+    .about-visual-inner { position: relative; z-index: 1; }
+
+    .credential-list { list-style: none; margin-top: 1.5rem; }
+    .credential-list li {
+      display: flex; align-items: center; gap: 10px;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .credential-list li:last-child { border-bottom: none; }
+    .check { color: #4ade80; font-size: 1rem; }
+
+    .values-list { list-style: none; margin-top: 1.5rem; }
+    .values-list li {
+      display: flex; gap: 12px; margin-bottom: 1.2rem;
+    }
+
+    .values-list .icon {
+      flex-shrink: 0;
+      width: 40px; height: 40px;
+      background: var(--light-blue);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .values-list h4 { font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+    .values-list p { font-size: 0.9rem; color: var(--muted); }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--navy); }
+    #testimonials h2 { color: var(--white); }
+    #testimonials .section-tag { background: rgba(46,125,247,0.2); color: #90bfff; }
+
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    .testimonial-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(46,125,247,0.4); }
+
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+
+    .testimonial-text {
+      font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.7;
+      font-style: italic; margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+
+    .author-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--mid-blue));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: white; font-size: 1rem;
+    }
+
+    .author-name { font-weight: 700; color: var(--white); font-size: 0.95rem; }
+    .author-title { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+
+    /* ── FAQ ── */
+    #faq { background: var(--sky); }
+
+    .faq-list { max-width: 780px; margin: 0 auto; }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      background: var(--white);
+      transition: box-shadow 0.2s;
+    }
+
+    .faq-item:hover { box-shadow: var(--shadow-sm); }
+
+    .faq-question {
+      width: 100%; text-align: left;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 1.5rem;
+      background: none; border: none; cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 1rem; font-weight: 600; color: var(--navy);
+      gap: 1rem;
+    }
+
+    .faq-question:hover { color: var(--accent); }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      background: var(--light-blue);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; color: var(--mid-blue);
+      transition: transform 0.3s;
+    }
+
+    .faq-chevron.open { transform: rotate(180deg); }
+
+    .faq-answer {
+      padding: 0 1.5rem;
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s;
+    }
+
+    .faq-answer.open {
+      max-height: 400px;
+      padding: 0 1.5rem 1.25rem;
+    }
+
+    .faq-answer p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+
+    /* ── BLOG ── */
+    #blog { background: var(--white); }
+
+    .blog-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
+    }
+
+    .blog-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.3s;
+      background: var(--white);
+    }
+
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+
+    .blog-thumb {
+      height: 180px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--mid-blue) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-thumb::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 60%);
+    }
+
+    .blog-body { padding: 1.5rem; }
+
+    .blog-meta {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.78rem; color: var(--muted); margin-bottom: 0.75rem;
+    }
+
+    .blog-tag {
+      background: var(--light-blue); color: var(--mid-blue);
+      padding: 2px 10px; border-radius: 100px;
+      font-weight: 600; font-size: 0.75rem;
+    }
+
+    .blog-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 0.6rem; line-height: 1.35;
+    }
+
+    .blog-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
+    .blog-read-more {
+      display: inline-flex; align-items: center; gap: 5px;
+      color: var(--accent); font-weight: 600; font-size: 0.85rem;
+      text-decoration: none; margin-top: 1rem; cursor: pointer;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--grey); }
+
+    .contact-wrapper {
+      display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem;
+    }
+
+    .contact-info p { color: var(--muted); line-height: 1.7; margin-bottom: 2rem; }
+
+    .contact-items { list-style: none; }
+    .contact-items li {
+      display: flex; align-items: center; gap: 12px;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem; color: var(--text);
+    }
+
+    .contact-items li:last-child { border-bottom: none; }
+
+    .contact-icon {
+      width: 40px; height: 40px;
+      background: var(--light-blue);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-group { margin-bottom: 1.2rem; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem; font-weight: 600; color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(46,125,247,0.12);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.9rem;
+      border: none; border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 1rem; font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .form-submit:hover { background: #1a6de0; transform: translateY(-1px); }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      background: linear-gradient(135deg, var(--mid-blue) 0%, var(--navy) 100%);
+      padding: 80px 5%;
+      text-align: center;
+    }
+
+    .cta-band h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band p { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      padding: 60px 5% 30px;
+    }
+
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem; font-weight: 800;
+      color: var(--white); margin-bottom: 0.75rem;
+    }
+
+    .footer-brand .logo span { color: var(--accent); }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 280px; }
+
+    .footer-col h4 {
+      color: var(--white); font-size: 0.88rem;
+      font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; margin-bottom: 1.2rem;
+    }
+
+    .footer-col a {
+      display: block; color: rgba(255,255,255,0.55);
+      text-decoration: none; font-size: 0.9rem;
+      margin-bottom: 0.6rem; transition: color 0.2s; cursor: pointer;
+    }
+
+    .footer-col a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+
+    .footer-bottom p { font-size: 0.85rem; }
+
+    .footer-badges { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .footer-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem; font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── PROCESS STEPS ── */
+    .process-steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s;
+    }
+
+    .process-step:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+    .step-num {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--accent), var(--mid-blue));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.2rem; font-weight: 800; color: var(--white);
+      margin: 0 auto 1rem;
+    }
+
+    .process-step h4 { font-family: var(--font-display); font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .process-step p { font-size: 0.88rem; color: var(--muted); }
+
+    /* ── PAGE-LEVEL HERO (inner pages) ── */
+    .inner-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      padding: 130px 5% 70px;
+      text-align: center;
+    }
+
+    .inner-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+    .inner-hero p { color: rgba(255,255,255,0.7); max-width: 540px; margin: 0 auto; font-size: 1.05rem; }
+
+    /* ── MOBILE NAV ── */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      position: fixed; top: 70px; left: 0; right: 0;
+      background: var(--navy);
+      padding: 1rem 5%;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 999;
+    }
+
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-weight: 500; cursor: pointer;
+    }
+
+    /* ── NOTIFICATION ── */
+    .toast {
+      position: fixed; bottom: 2rem; right: 2rem;
+      background: var(--success);
+      color: white; padding: 1rem 1.5rem;
+      border-radius: 12px; font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(100px); opacity: 0;
+      transition: all 0.4s;
+      z-index: 9999;
+    }
+
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    /* ── UTILS ── */
+    .highlight { color: var(--accent); }
+    .divider { height: 1px; background: var(--border); margin: 0; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 70px 5%; }
+      .hero-stats { gap: 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.2s; }
+    .fade-up-3 { animation-delay: 0.3s; }
+    .fade-up-4 { animation-delay: 0.4s; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" onclick="showPage('home')"><span>EWS</span>1</a>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">Home</a></li>
+    <li><a onclick="showPage('about')">About</a></li>
+    <li><a onclick="showPage('services')">Services</a></li>
+    <li><a onclick="showPage('blog')">Blog</a></li>
+    <li><a onclick="showPage('faq')">FAQ</a></li>
+    <li><a onclick="showPage('testimonials')">Testimonials</a></li>
+    <li><a class="nav-cta" onclick="showPage('contact')">Get Assessment →</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a onclick="showPage('home'); closeMobile()">Home</a>
+  <a onclick="showPage('about'); closeMobile()">About Us</a>
+  <a onclick="showPage('services'); closeMobile()">Services</a>
+  <a onclick="showPage('blog'); closeMobile()">Blog</a>
+  <a onclick="showPage('faq'); closeMobile()">FAQ</a>
+  <a onclick="showPage('testimonials'); closeMobile()">Testimonials</a>
+  <a onclick="showPage('contact'); closeMobile()">Contact Us</a>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✅ Message sent! We'll be in touch within 24 hours.</div>
+
+<!-- ========== HOME PAGE ========== -->
+<div id="page-home">
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-content">
+      <div class="hero-badge fade-up">UK's Leading EWS1 Specialists</div>
+      <h1 class="fade-up fade-up-1">Your <em>EWS1</em> Certificate.<br>Fast, Reliable &amp; RICS-Backed.</h1>
+      <p class="hero-sub fade-up fade-up-2">From initial assessment to final certification — EWS1 provides expert External Wall System fire safety services across the UK, helping flat owners, leaseholders and housing associations move forward with confidence.</p>
+      <div class="hero-actions fade-up fade-up-3">
+        <button class="btn-primary" onclick="showPage('contact')">Book a Free Consultation →</button>
+        <button class="btn-secondary" onclick="showPage('services')">Our Services</button>
+      </div>
+      <div class="hero-stats fade-up fade-up-4">
+        <div class="stat-item">
+          <div class="stat-num">2,400<span>+</span></div>
+          <div class="stat-label">Assessments Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">14<span>d</span></div>
+          <div class="stat-label">Average Turnaround</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-icon">🏛️</span> RICS Regulated</div>
+    <div class="trust-item"><span class="trust-icon">🔒</span> Fully Insured</div>
+    <div class="trust-item"><span class="trust-icon">📋</span> BSA Compliant</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> Fast Turnaround</div>
+    <div class="trust-item"><span class="trust-icon">🇬🇧</span> UK-Wide Coverage</div>
+  </div>
+
+  <!-- SERVICES PREVIEW -->
+  <section id="services">
+    <div class="text-center">
+      <span class="section-tag">What We Do</span>
+      <h2>Comprehensive EWS1 Services</h2>
+      <p class="section-lead">We handle every stage of the EWS1 process — from initial cladding review to RICS-compliant certification and remediation guidance.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>EWS1 Assessment</h3>
+        <p>Full external wall system inspection by RICS-qualified fire engineers. We assess cladding, insulation, balconies and fixings to determine fire risk and assign the correct A or B rating.</p>
+        <a class="service-link" onclick="showPage('services')">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <h3>EWS1 Form Completion</h3>
+        <p>We complete the official EWS1 form to the latest RICS standard, ensuring mortgage lenders and conveyancers accept your documentation without delay or rejection.</p>
+        <a class="service-link" onclick="showPage('services')">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Remediation Consultancy</h3>
+        <p>If your building receives a B2 rating, our experts advise on remediation pathways, cost estimates, funding routes including BSF grants, and liaison with contractors.</p>
+        <a class="service-link" onclick="showPage('services')">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>Leaseholder Support</h3>
+        <p>Helping leaseholders and flat owners understand their rights, access documentation, challenge unfair costs and navigate the Building Safety Act 2022 protections.</p>
+        <a class="service-link" onclick="showPage('services')">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Housing Association Audits</h3>
+        <p>Portfolio-wide EWS1 audits for housing associations and freeholders. We prioritise buildings by risk, manage documentation and report to regulators efficiently.</p>
+        <a class="service-link" onclick="showPage('services')">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📞</div>
+        <h3>Expert Witness &amp; Reports</h3>
+        <p>Independent expert witness reports and technical advice for solicitors, tribunals and planning disputes relating to EWS1 and external wall fire safety matters.</p>
+        <a class="service-link" onclick="showPage('services')">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="background: var(--white);">
+    <div class="text-center">
+      <span class="section-tag">Our Process</span>
+      <h2>How It Works</h2>
+      <p class="section-lead">A straightforward, transparent 4-step process from enquiry to your certified EWS1 form.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h4>Free Consultation</h4>
+        <p>Tell us about your building — we'll confirm if an EWS1 is needed and provide a no-obligation quote.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h4>Site Survey</h4>
+        <p>Our qualified fire engineer visits to inspect the external walls, cladding systems, insulation and penetrations.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h4>Analysis &amp; Report</h4>
+        <p>We analyse samples, drawings and data, then prepare a comprehensive technical report with our findings.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h4>EWS1 Certification</h4>
+        <p>Your completed, RICS-compliant EWS1 form is issued — accepted by all major UK mortgage lenders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS PREVIEW -->
+  <section id="testimonials" style="background: var(--navy);">
+    <div class="text-center">
+      <span class="section-tag" style="background:rgba(46,125,247,0.2);color:#90bfff;">Client Stories</span>
+      <h2 style="color:white;">Trusted by Thousands Across the UK</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.6);margin-left:auto;margin-right:auto;">From anxious leaseholders to large housing associations — here's what our clients say.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"After being stuck for 18 months unable to sell my flat, EWS1 completed our assessment in under two weeks. The team was professional, communicative and their EWS1 form was accepted by our lender first time."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SR</div>
+          <div>
+            <div class="author-name">Sarah R.</div>
+            <div class="author-title">Leaseholder, Manchester</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"We engaged EWS1 for a portfolio audit across 14 residential blocks. Their structured approach, clear reporting and knowledge of the Building Safety Act saved us considerable time and legal costs."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JT</div>
+          <div>
+            <div class="author-name">James T.</div>
+            <div class="author-title">Asset Manager, London Housing Association</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Excellent service from start to finish. They clearly explained the A2 outcome and what it meant for our sale. I'd recommend EWS1 to anyone dealing with cladding concerns — they make a stressful process manageable."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PM</div>
+          <div>
+            <div class="author-name">Priya M.</div>
+            <div class="author-title">Property Owner, Birmingham</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <h2>Ready to Get Your EWS1 Certificate?</h2>
+    <p>Speak to our specialists today. Free initial consultation, no obligation — just clear, honest advice.</p>
+    <button class="btn-primary" onclick="showPage('contact')">Get a Free Quote →</button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span>EWS</span>1</div>
+        <p>UK-leading specialists in External Wall System fire safety assessments, EWS1 certification and building safety consultancy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('services')">EWS1 Assessment</a>
+        <a onclick="showPage('services')">EWS1 Form Completion</a>
+        <a onclick="showPage('services')">Remediation Consultancy</a>
+        <a onclick="showPage('services')">Leaseholder Support</a>
+        <a onclick="showPage('services')">Housing Association Audits</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('testimonials')">Testimonials</a>
+        <a onclick="showPage('blog')">Blog</a>
+        <a onclick="showPage('faq')">FAQ</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Complaints Procedure</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 EWS1 Ltd. All rights reserved. Registered in England & Wales.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">RICS Regulated</span>
+        <span class="footer-badge">BSA Compliant</span>
+        <span class="footer-badge">ICO Registered</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ========== ABOUT PAGE ========== -->
+<div id="page-about" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">About EWS1</h1>
+    <p>UK specialists in fire safety built on expertise, integrity and a commitment to protecting leaseholders and communities.</p>
+  </div>
+
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <span class="section-tag">Who We Are</span>
+        <h2>Experts in External Wall Fire Safety Since 2020</h2>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1.5rem;">EWS1 was founded in the immediate aftermath of the EWS1 form's introduction in December 2019, when it became clear that thousands of homeowners across the UK urgently needed qualified, trustworthy assessors to help them navigate the new fire safety landscape.</p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1.5rem;">Our founding team of RICS-qualified fire engineers and chartered surveyors recognised a sector in crisis — leaseholders unable to sell, remortgage or even insure their properties. We built EWS1 to be the most rigorous, transparent and accessible assessment service in the country.</p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:2rem;">Today we have completed over 2,400 assessments across England, Scotland and Wales, and remain committed to staying at the forefront of evolving Building Safety Act requirements.</p>
+        <ul class="values-list">
+          <li>
+            <span class="icon">🎓</span>
+            <div>
+              <h4>Qualified Expertise</h4>
+              <p>Every assessment is conducted or supervised by a RICS-regulated fire engineer or chartered building surveyor.</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon">🤝</span>
+            <div>
+              <h4>Transparent Process</h4>
+              <p>No hidden fees, no delays without explanation. We keep clients informed at every stage.</p>
+            </div>
+          </li>
+          <li>
+            <span class="icon">⚡</span>
+            <div>
+              <h4>Industry-Leading Speed</h4>
+              <p>Average 14-day turnaround from survey to certified form — without compromising rigour.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="about-visual-inner">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:white;margin-bottom:0.5rem;">Our Credentials</h3>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;margin-bottom:1rem;">Every EWS1 certificate we issue is backed by professional accreditation you can trust.</p>
+          <ul class="credential-list">
+            <li><span class="check">✓</span> RICS Regulated Practice</li>
+            <li><span class="check">✓</span> Chartered Fire Engineers (IFE)</li>
+            <li><span class="check">✓</span> Chartered Building Surveyors (MRICS)</li>
+            <li><span class="check">✓</span> Professional Indemnity Insured</li>
+            <li><span class="check">✓</span> Building Safety Regulator Registered</li>
+            <li><span class="check">✓</span> UK-wide coverage — England, Scotland &amp; Wales</li>
+            <li><span class="check">✓</span> BSA 2022 compliance specialists</li>
+          </ul>
+          <div style="margin-top:2rem;padding:1.25rem;background:rgba(255,255,255,0.08);border-radius:12px;">
+            <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Registered address</p>
+            <p style="color:white;font-weight:600;margin-top:4px;">EWS1 Ltd, 20 Finsbury Street, London, EC2Y 9AQ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2024 EWS1 Ltd. All rights reserved.</p>
+      <button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button>
+    </div>
+  </footer>
+</div>
+
+<!-- ========== SERVICES PAGE ========== -->
+<div id="page-services" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Our Services</h1>
+    <p>End-to-end EWS1 and building fire safety services for leaseholders, freeholders and housing associations.</p>
+  </div>
+  <section style="background:var(--sky);">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>EWS1 Assessment</h3>
+        <p>Full external wall system inspection by RICS-qualified fire engineers. We assess cladding, insulation, balconies and fixings, evaluate fire risk and assign the correct A or B rating with full supporting evidence.</p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;"><strong style="color:var(--navy);">From:</strong> £950 + VAT</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <h3>EWS1 Form Completion</h3>
+        <p>Official EWS1 form completed to the latest RICS standard (December 2019 / updated 2021 guidance). All major mortgage lenders accept our forms — including HSBC, Barclays, Nationwide and Halifax.</p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;"><strong style="color:var(--navy);">Included:</strong> With all assessments</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Remediation Consultancy</h3>
+        <p>Where buildings require remediation work, we provide technical specification, contractor tendering support, Building Safety Fund application guidance and project oversight.</p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;"><strong style="color:var(--navy);">From:</strong> £1,500 + VAT</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>Leaseholder Support</h3>
+        <p>Independent advice for leaseholders on their rights under the Building Safety Act 2022, EWS1 obligations, service charge disputes, and access to the Building Safety Levy protections.</p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;"><strong style="color:var(--navy);">From:</strong> £350 + VAT</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Housing Association Audits</h3>
+        <p>Portfolio-wide EWS1 audits for registered providers, housing associations and local authorities. We triage by risk, manage documentation pipelines and produce board-level reporting.</p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;"><strong style="color:var(--navy);">From:</strong> POA</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📞</div>
+        <h3>Expert Witness Reports</h3>
+        <p>RICS-compliant expert witness reports for property tribunals, legal disputes and planning appeals. Our reports are prepared to CPR Part 35 standards and withstand legal scrutiny.</p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.9rem;"><strong style="color:var(--navy);">From:</strong> £2,500 + VAT</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <button class="btn-primary" onclick="showPage('contact')">Get a Free Quote for Your Building →</button>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2024 EWS1 Ltd. All rights reserved.</p>
+      <button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button>
+    </div>
+  </footer>
+</div>
+
+<!-- ========== BLOG PAGE ========== -->
+<div id="page-blog" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">EWS1 Knowledge Hub</h1>
+    <p>Expert articles, guides and updates on EWS1, building safety legislation and cladding remediation across the UK.</p>
+  </div>
+  <section>
+    <div class="blog-grid">
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-thumb">🏢</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Legislation</span>
+            <span>12 Nov 2024</span>
+            <span>· 6 min read</span>
+          </div>
+          <h3 itemprop="headline">Building Safety Act 2022: What Leaseholders Need to Know in 2024</h3>
+          <p>The Building Safety Act transformed leaseholder protections. We break down the key provisions, what landlords can and cannot charge for, and how to use the Act to your advantage.</p>
+          <a class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-thumb">🔬</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Assessment</span>
+            <span>3 Oct 2024</span>
+            <span>· 5 min read</span>
+          </div>
+          <h3 itemprop="headline">EWS1 Ratings Explained: A1, A2, B1 and B2 — What Do They Mean?</h3>
+          <p>Confused by EWS1 ratings? Our experts explain each category in plain English, what each means for your mortgage application and what you can do if your building receives a B2.</p>
+          <a class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-thumb">💷</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Funding</span>
+            <span>22 Sept 2024</span>
+            <span>· 7 min read</span>
+          </div>
+          <h3 itemprop="headline">Building Safety Fund: How to Apply and What It Covers</h3>
+          <p>The government's £5.1bn Building Safety Fund can cover cladding remediation costs. We guide you through eligibility criteria, the application process and common pitfalls to avoid.</p>
+          <a class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-thumb">🔑</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Mortgages</span>
+            <span>14 Aug 2024</span>
+            <span>· 4 min read</span>
+          </div>
+          <h3 itemprop="headline">Can I Get a Mortgage Without an EWS1 Form in 2024?</h3>
+          <p>Lender requirements have evolved since 2019. We examine which buildings now require an EWS1 form for mortgage purposes, and what alternatives lenders accept on lower-risk properties.</p>
+          <a class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-thumb">🏗️</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Remediation</span>
+            <span>5 Jul 2024</span>
+            <span>· 8 min read</span>
+          </div>
+          <h3 itemprop="headline">Cladding Remediation: A Step-by-Step Guide for Freeholders</h3>
+          <p>From commissioning an EWS1 to completing remediation works and re-issuing certificates — a comprehensive guide for building owners and freeholders navigating the remediation journey.</p>
+          <a class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+      <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <div class="blog-thumb">📋</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">Guide</span>
+            <span>18 Jun 2024</span>
+            <span>· 5 min read</span>
+          </div>
+          <h3 itemprop="headline">The Complete EWS1 Guide for First-Time Buyers</h3>
+          <p>Buying a flat and unsure about EWS1? This guide explains everything you need to know before making an offer, what questions to ask the seller, and how to protect your purchase.</p>
+          <a class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2024 EWS1 Ltd. All rights reserved.</p>
+      <button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button>
+    </div>
+  </footer>
+</div>
+
+<!-- ========== FAQ PAGE ========== -->
+<div id="page-faq" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Frequently Asked Questions</h1>
+    <p>Answers to the most common questions about EWS1 assessments, forms and building fire safety.</p>
+  </div>
+  <section id="faq" style="background:var(--sky);">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-tag">Got Questions?</span>
+      <h2>EWS1 — Everything You Need to Know</h2>
+    </div>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          What is an EWS1 form and why do I need one?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">An EWS1 (External Wall System 1) form is a standardised document introduced by RICS, UK Finance and the Building Societies Association in December 2019. It certifies that the external wall system of a residential building has been assessed for fire safety. Mortgage lenders require it to approve loans on flats in buildings where cladding or other combustible materials may be present. Without it, selling or remortgaging a flat can be extremely difficult.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          Which buildings need an EWS1 assessment?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Since January 2023, lenders may only require an EWS1 form for buildings over 18 metres (approx. 6 storeys) in height. However, individual lenders retain discretion and some still request EWS1 forms for lower-rise buildings if there is reason to believe combustible cladding is present. If you are trying to sell or remortgage a flat and a lender has requested an EWS1 form, you will need one regardless of building height.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          What do the EWS1 ratings (A1, A2, B1, B2) mean?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">A1 means no combustible materials are present in the external wall — no further action required. A2 means combustible materials are present but the fire risk is sufficiently low that no remediation is needed. B1 means combustible materials are present, but mitigating features (such as sprinklers) mean the risk is acceptable. B2 is the most serious — remediation is required before the building is considered safe and a mortgage can usually be obtained. The vast majority of buildings assessed receive an A2 or B1 rating.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          How long does an EWS1 assessment take?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Our typical turnaround is 14 days from the site survey to issuing the completed EWS1 form. The site survey itself usually takes half a day to a full day depending on building size and complexity. In urgent cases (such as an imminent property sale), we offer expedited 7-day service — please contact us to discuss your requirements.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          Who pays for the EWS1 assessment?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Typically, the freeholder or building owner is responsible for commissioning and paying for the EWS1 assessment. Under the Building Safety Act 2022, qualifying leaseholders (those who owned the property before February 2022) are broadly protected from being charged for cladding-related assessments and remediation. Individual sellers occasionally commission private EWS1 assessments to facilitate a property sale, though this is less common. Contact us for guidance specific to your situation.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          How much does an EWS1 assessment cost?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Our EWS1 assessments start from £950 + VAT for smaller buildings and increase with the complexity and size of the building. Larger or more complex buildings requiring invasive investigations or laboratory sample analysis will cost more. We always provide a fixed-price quote before commencing work so there are no surprises. Contact us for a bespoke quote for your building.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          My building has received a B2 rating — what happens now?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">A B2 rating means the external wall system poses an unacceptable fire risk and remediation work is required. This does not mean the building is immediately unsafe to occupy — the fire risk is assessed in the context of the building's height, existing mitigations and the nature of the materials. Our remediation consultancy team can guide you through the next steps: obtaining a technical specification, tendering for contractors, applying for Building Safety Fund grants, and liaising with the Building Safety Regulator.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" itemprop="name">
+          Are your EWS1 forms accepted by all mortgage lenders?
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">Yes. All of our EWS1 forms are completed by RICS-regulated professionals to the RICS EWS1 Form guidance and are accepted by all major UK mortgage lenders including HSBC, Barclays, NatWest, Nationwide, Halifax, Santander, Lloyds and many more. If a specific lender raises any concern with our documentation, we will liaise with them directly at no additional cost.</p>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <p style="color:var(--muted);margin-bottom:1.5rem;">Still have questions? Our experts are happy to help.</p>
+      <button class="btn-primary" onclick="showPage('contact')">Contact Our Team →</button>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2024 EWS1 Ltd. All rights reserved.</p>
+      <button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button>
+    </div>
+  </footer>
+</div>
+
+<!-- ========== TESTIMONIALS PAGE ========== -->
+<div id="page-testimonials" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Client Testimonials</h1>
+    <p>Real stories from leaseholders, property owners and housing associations across the UK.</p>
+  </div>
+  <section style="background:var(--navy);">
+    <div class="testimonials-grid" style="margin-bottom:2rem;">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"After being stuck for 18 months unable to sell my flat, EWS1 completed our assessment in under two weeks. The team was professional, communicative and their EWS1 form was accepted by our lender first time."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SR</div>
+          <div><div class="author-name">Sarah R.</div><div class="author-title">Leaseholder, Manchester</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"We engaged EWS1 for a portfolio audit across 14 residential blocks. Their structured approach, clear reporting and knowledge of the Building Safety Act saved us considerable time and legal costs."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JT</div>
+          <div><div class="author-name">James T.</div><div class="author-title">Asset Manager, London Housing Association</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Excellent service from start to finish. They clearly explained the A2 outcome and what it meant for our sale. I'd recommend EWS1 to anyone dealing with cladding concerns."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PM</div>
+          <div><div class="author-name">Priya M.</div><div class="author-title">Property Owner, Birmingham</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"As a solicitor regularly dealing with cladding issues, I rely on EWS1 for quick, expert advice. Their turnaround times and quality of documentation are consistently outstanding."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DC</div>
+          <div><div class="author-name">David C.</div><div class="author-title">Property Solicitor, Leeds</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"We had a very complex building with mixed cladding types. EWS1's engineers navigated it brilliantly — clear communication throughout and a thorough, defensible report at the end."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">NK</div>
+          <div><div class="author-name">Neelam K.</div><div class="author-title">Property Manager, Bristol</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The EWS1 team helped us secure Building Safety Fund funding that we didn't know we were entitled to. Their remediation consultancy paid for itself many times over."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">ML</div>
+          <div><div class="author-name">Mark L.</div><div class="author-title">Residents' Management Company Director, London</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-bottom" style="border-top:none;padding-top:0;background:var(--navy);">
+      <p style="color:rgba(255,255,255,0.5);">© 2024 EWS1 Ltd. All rights reserved.</p>
+      <button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button>
+    </div>
+  </footer>
+</div>
+
+<!-- ========== CONTACT PAGE ========== -->
+<div id="page-contact" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Contact Us</h1>
+    <p>Get in touch for a free consultation. We respond to all enquiries within one working day.</p>
+  </div>
+  <section id="contact" style="background:var(--grey);">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>Whether you need an EWS1 assessment, have a question about your building or need urgent advice, our specialists are here to help. Fill in the form and we'll get back to you within 24 hours.</p>
+        <ul class="contact-items">
+          <li>
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <div style="color:var(--muted);font-size:0.9rem;">enquiries@ews1.co.uk</div>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <div style="color:var(--muted);font-size:0.9rem;">0800 123 4567 (Free, Mon–Fri 9am–5:30pm)</div>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Office</strong>
+              <div style="color:var(--muted);font-size:0.9rem;">20 Finsbury Street, London, EC2Y 9AQ</div>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon">🕐</span>
+            <div>
+              <strong>Response Time</strong>
+              <div style="color:var(--muted);font-size:0.9rem;">Within 1 working day — usually same day</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="07700 900000" />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Required *</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option>EWS1 Assessment</option>
+            <option>EWS1 Form Completion</option>
+            <option>Remediation Consultancy</option>
+            <option>Leaseholder Support</option>
+            <option>Housing Association Audit</option>
+            <option>Expert Witness Report</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="building">Building Address / Postcode</label>
+          <input type="text" id="building" placeholder="123 Example Street, London, SW1A 1AA" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" placeholder="Please describe your requirements, including building height, number of flats and any urgency..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <p style="font-size:0.8rem;color:var(--muted);text-align:center;margin-top:1rem;">🔒 Your data is processed in accordance with our Privacy Policy and never shared with third parties.</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-bottom" style="border-top:none;padding-top:0;">
+      <p>© 2024 EWS1 Ltd. All rights reserved.</p>
+      <button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // ── PAGE ROUTING ──
+  const pages = ['home','about','services','blog','faq','testimonials','contact'];
+
+  function showPage(id) {
+    pages.forEach(p => {
+      document.getElementById('page-'+p).style.display = p === id ? 'block' : 'none';
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Update URL hash for SEO / back-button
+    history.pushState(null, '', '#' + id);
+    // Update nav active state
+    document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(a => a.style.color = '');
+  }
+
+  // Handle initial hash
+  const hash = window.location.hash.replace('#','');
+  if (pages.includes(hash)) showPage(hash);
+
+  // ── MOBILE NAV ──
+  function toggleMobile() {
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('open');
+  }
+  function closeMobile() {
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+
+  // ── FAQ ACCORDION ──
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const chevron = btn.querySelector('.faq-chevron');
+    const isOpen = answer.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+    // Open clicked
+    if (!isOpen) {
+      answer.classList.add('open');
+      chevron.classList.add('open');
+    }
+  }
+
+  // ── CONTACT FORM ──
+  function submitForm() {
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!fname || !email || !message) {
+      alert('Please fill in all required fields (marked with *).');
+      return;
+    }
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+    document.getElementById('fname').value = '';
+    document.getElementById('lname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+    document.getElementById('service').value = '';
+    document.getElementById('building').value = '';
+  }
+
+  // ── SCROLL NAV SHADOW ──
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('mainNav');
+    nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.3)' : 'none';
+  });
+</script>
+</body>
+</html>
