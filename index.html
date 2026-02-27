@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EWS1 – Expert External Wall System fire safety assessment, consultancy and remediation advice across the UK." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="EWS1 – UK External Wall System Fire Safety Experts" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://ews1.co.uk" />
+  <title>EWS1 – External Wall System Fire Safety Experts | UK</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "EWS1",
+    "url": "https://ews1.co.uk",
+    "description": "UK-based experts in External Wall System (EWS1) fire safety assessments.",
+    "areaServed": "United Kingdom"
+  }
+  </script>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0a1628; --blue: #1a3a6b; --mid-blue: #2256a8; --accent: #2e7df7;
+      --light-blue: #ddeeff; --sky: #f0f6ff; --white: #ffffff; --grey: #f4f7fc;
+      --text: #1a1f2e; --muted: #5a6478; --border: #d0ddf0;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --shadow-sm: 0 2px 8px rgba(10,22,40,0.08);
+      --shadow-md: 0 8px 32px rgba(10,22,40,0.12);
+      --shadow-lg: 0 20px 60px rgba(10,22,40,0.16);
+      --radius: 12px; --radius-lg: 20px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,22,40,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: -0.5px; cursor: pointer; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color 0.2s; cursor: pointer; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.55rem 1.3rem; border-radius: 8px; font-weight: 600 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: #1a6de0 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+    section { padding: 100px 5%; }
+    #home { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, #1a4080 100%); position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; padding-top: 70px; }
+    #home::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(46,125,247,0.18) 0%, transparent 60%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(46,125,247,0.15); border: 1px solid rgba(46,125,247,0.3); color: #90bfff; padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -1px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.75); max-width: 580px; margin-bottom: 2.5rem; line-height: 1.7; font-weight: 300; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--white); padding: 0.85rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 20px rgba(46,125,247,0.4); }
+    .btn-primary:hover { background: #1a6de0; transform: translateY(-2px); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); padding: 0.85rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; transition: all 0.2s; }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.6); }
+    .hero-stats { display: flex; gap: 3rem; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.12); flex-wrap: wrap; }
+    .stat-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--white); line-height: 1; }
+    .stat-num span { color: var(--accent); }
+    .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+    .trust-bar { background: var(--grey); padding: 1.5rem 5%; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 600; color: var(--blue); }
+    .section-tag { display: inline-block; background: var(--light-blue); color: var(--mid-blue); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1rem; }
+    h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--navy); line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 1rem; }
+    .section-lead { font-size: 1.1rem; color: var(--muted); max-width: 580px; line-height: 1.7; margin-bottom: 3rem; }
+    .text-center { text-align: center; }
+    .text-center .section-lead { margin-left: auto; margin-right: auto; }
+    #services { background: var(--sky); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .service-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; transition: all 0.3s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--mid-blue)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { width: 52px; height: 52px; background: var(--light-blue); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.2rem; }
+    .service-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+    .service-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+    .service-price { font-size: 0.88rem; color: var(--muted); margin-top: 0.75rem; }
+    .service-price strong { color: var(--navy); }
+    #about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-visual { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); border-radius: var(--radius-lg); padding: 3rem; color: white; position: relative; overflow: hidden; }
+    .about-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(46,125,247,0.3) 0%, transparent 60%); }
+    .about-visual-inner { position: relative; z-index: 1; }
+    .credential-list { list-style: none; margin-top: 1.5rem; }
+    .credential-list li { display: flex; align-items: center; gap: 10px; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; color: rgba(255,255,255,0.85); }
+    .credential-list li:last-child { border-bottom: none; }
+    .check { color: #4ade80; }
+    .values-list { list-style: none; margin-top: 1.5rem; }
+    .values-list li { display: flex; gap: 12px; margin-bottom: 1.2rem; }
+    .values-list .icon { flex-shrink: 0; width: 40px; height: 40px; background: var(--light-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .values-list h4 { font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+    .values-list p { font-size: 0.9rem; color: var(--muted); }
+    #testimonials { background: var(--navy); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 2rem; transition: all 0.3s; }
+    .testimonial-card:hover { background: rgba(255,255,255,0.09); }
+    .stars { color: #e8a020; font-size: 1rem; margin-bottom: 1rem; }
+    .testimonial-text { font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.7; font-style: italic; margin-bottom: 1.5rem; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--mid-blue)); display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; font-size: 1rem; }
+    .author-name { font-weight: 700; color: var(--white); font-size: 0.95rem; }
+    .author-title { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+    #faq { background: var(--sky); }
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 0.75rem; overflow: hidden; background: var(--white); }
+    .faq-question { width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; background: none; border: none; cursor: pointer; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--navy); gap: 1rem; }
+    .faq-chevron { flex-shrink: 0; width: 24px; height: 24px; background: var(--light-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--mid-blue); transition: transform 0.3s; }
+    .faq-chevron.open { transform: rotate(180deg); }
+    .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; }
+    .faq-answer.open { max-height: 400px; padding: 0 1.5rem 1.25rem; }
+    .faq-answer p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+    #blog { background: var(--white); }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .blog-card { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s; background: var(--white); }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .blog-thumb { height: 180px; background: linear-gradient(135deg, var(--blue) 0%, var(--mid-blue) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .blog-body { padding: 1.5rem; }
+    .blog-meta { display: flex; align-items: center; gap: 0.75rem; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .blog-tag { background: var(--light-blue); color: var(--mid-blue); padding: 2px 10px; border-radius: 100px; font-weight: 600; font-size: 0.75rem; }
+    .blog-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; line-height: 1.35; }
+    .blog-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    #contact { background: var(--grey); }
+    .contact-wrapper { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+    .contact-items { list-style: none; }
+    .contact-items li { display: flex; align-items: center; gap: 12px; padding: 1rem 0; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    .contact-items li:last-child { border-bottom: none; }
+    .contact-icon { width: 40px; height: 40px; background: var(--light-blue); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .form-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-sm); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid var(--border); border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; color: var(--text); background: var(--white); transition: border-color 0.2s; outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(46,125,247,0.12); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit { width: 100%; background: var(--accent); color: var(--white); padding: 0.9rem; border: none; border-radius: 10px; font-family: var(--font-body); font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .form-submit:hover { background: #1a6de0; }
+    .cta-band { background: linear-gradient(135deg, var(--mid-blue) 0%, var(--navy) 100%); padding: 80px 5%; text-align: center; }
+    .cta-band h2 { color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band p { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .process-step { text-align: center; padding: 2rem 1.5rem; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); transition: all 0.3s; }
+    .process-step:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .step-num { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent), var(--mid-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--white); margin: 0 auto 1rem; }
+    .process-step h4 { font-family: var(--font-display); font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .process-step p { font-size: 0.88rem; color: var(--muted); }
+    .inner-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%); padding: 130px 5% 70px; text-align: center; }
+    .inner-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.75rem; }
+    .inner-hero p { color: rgba(255,255,255,0.7); max-width: 540px; margin: 0 auto; font-size: 1.05rem; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 60px 5% 30px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 0.75rem; }
+    .footer-brand .logo span { color: var(--accent); }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; max-width: 280px; }
+    .footer-col h4 { color: var(--white); font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.2rem; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.9rem; margin-bottom: 0.6rem; transition: color 0.2s; cursor: pointer; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: 0.85rem; }
+    .footer-badges { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .footer-badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.6); }
+    .mobile-nav { display: none; flex-direction: column; position: fixed; top: 70px; left: 0; right: 0; background: var(--navy); padding: 1rem 5%; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 999; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { color: rgba(255,255,255,0.8); text-decoration: none; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-weight: 500; cursor: pointer; }
+    .toast { position: fixed; bottom: 2rem; right: 2rem; background: #16a34a; color: white; padding: 1rem 1.5rem; border-radius: 12px; font-weight: 600; box-shadow: var(--shadow-lg); transform: translateY(100px); opacity: 0; transition: all 0.4s; z-index: 9999; }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .loading { text-align: center; padding: 3rem; color: var(--muted); }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 70px 5%; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.2s; }
+    .fade-up-3 { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a class="nav-logo" onclick="showPage('home')"><span>EWS</span>1</a>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">Home</a></li>
+    <li><a onclick="showPage('about')">About</a></li>
+    <li><a onclick="showPage('services')">Services</a></li>
+    <li><a onclick="showPage('blog')">Blog</a></li>
+    <li><a onclick="showPage('faq')">FAQ</a></li>
+    <li><a onclick="showPage('testimonials')">Testimonials</a></li>
+    <li><a class="nav-cta" onclick="showPage('contact')">Get Assessment →</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a onclick="showPage('home'); closeMobile()">Home</a>
+  <a onclick="showPage('about'); closeMobile()">About Us</a>
+  <a onclick="showPage('services'); closeMobile()">Services</a>
+  <a onclick="showPage('blog'); closeMobile()">Blog</a>
+  <a onclick="showPage('faq'); closeMobile()">FAQ</a>
+  <a onclick="showPage('testimonials'); closeMobile()">Testimonials</a>
+  <a onclick="showPage('contact'); closeMobile()">Contact Us</a>
+</div>
+
+<div class="toast" id="toast">✅ Message sent! We'll be in touch within 24 hours.</div>
+
+<!-- HOME PAGE -->
+<div id="page-home">
+  <section id="home">
+    <div class="hero-content">
+      <div class="hero-badge fade-up" id="hero-badge">UK's Leading EWS1 Specialists</div>
+      <h1 class="fade-up fade-up-1"><em id="hero-h1">Your EWS1 Certificate.</em><br><span id="hero-h2">Fast, Reliable & RICS-Backed.</span></h1>
+      <p class="hero-sub fade-up fade-up-2" id="hero-sub">From initial assessment to final certification — EWS1 provides expert External Wall System fire safety services across the UK.</p>
+      <div class="hero-actions fade-up fade-up-3">
+        <button class="btn-primary" onclick="showPage('contact')" id="hero-btn-primary">Book a Free Consultation →</button>
+        <button class="btn-secondary" onclick="showPage('services')" id="hero-btn-secondary">Our Services</button>
+      </div>
+      <div class="hero-stats fade-up">
+        <div class="stat-item">
+          <div class="stat-num" id="stat1-num">2,400<span>+</span></div>
+          <div class="stat-label" id="stat1-label">Assessments Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="stat2-num">98<span>%</span></div>
+          <div class="stat-label" id="stat2-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="stat3-num">14<span>d</span></div>
+          <div class="stat-label" id="stat3-label">Average Turnaround</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div class="trust-item">🏛️ RICS Regulated</div>
+    <div class="trust-item">🔒 Fully Insured</div>
+    <div class="trust-item">📋 BSA Compliant</div>
+    <div class="trust-item">⚡ Fast Turnaround</div>
+    <div class="trust-item">🇬🇧 UK-Wide Coverage</div>
+  </div>
+
+  <section id="services" style="background:var(--sky);">
+    <div class="text-center">
+      <span class="section-tag">What We Do</span>
+      <h2>Comprehensive EWS1 Services</h2>
+      <p class="section-lead">We handle every stage of the EWS1 process — from initial cladding review to RICS-compliant certification.</p>
+    </div>
+    <div class="services-grid" id="services-grid">
+      <div class="loading">Loading services...</div>
+    </div>
+  </section>
+
+  <section style="background:var(--white);">
+    <div class="text-center">
+      <span class="section-tag">Our Process</span>
+      <h2 id="process-title">How It Works</h2>
+      <p class="section-lead" id="process-sub">A straightforward 4-step process from enquiry to your certified EWS1 form.</p>
+    </div>
+    <div class="process-steps" id="process-steps">
+      <div class="process-step"><div class="step-num">1</div><h4>Free Consultation</h4><p>Tell us about your building — we'll confirm if an EWS1 is needed and provide a quote.</p></div>
+      <div class="process-step"><div class="step-num">2</div><h4>Site Survey</h4><p>Our qualified fire engineer visits to inspect the external walls, cladding and insulation.</p></div>
+      <div class="process-step"><div class="step-num">3</div><h4>Analysis & Report</h4><p>We analyse samples and data, then prepare a comprehensive technical report.</p></div>
+      <div class="process-step"><div class="step-num">4</div><h4>EWS1 Certification</h4><p>Your completed RICS-compliant EWS1 form is issued — accepted by all major lenders.</p></div>
+    </div>
+  </section>
+
+  <section id="testimonials" style="background:var(--navy);">
+    <div class="text-center">
+      <span class="section-tag" style="background:rgba(46,125,247,0.2);color:#90bfff;">Client Stories</span>
+      <h2 style="color:white;">Trusted by Thousands Across the UK</h2>
+    </div>
+    <div class="testimonials-grid" id="testimonials-grid">
+      <div class="loading" style="color:rgba(255,255,255,0.5);">Loading testimonials...</div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2 id="cta-headline">Ready to Get Your EWS1 Certificate?</h2>
+    <p id="cta-sub">Speak to our specialists today. Free initial consultation, no obligation.</p>
+    <button class="btn-primary" onclick="showPage('contact')" id="cta-btn">Get a Free Quote →</button>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span>EWS</span>1</div>
+        <p id="footer-desc">UK-leading specialists in External Wall System fire safety assessments and building safety consultancy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a onclick="showPage('services')">EWS1 Assessment</a>
+        <a onclick="showPage('services')">Remediation Consultancy</a>
+        <a onclick="showPage('services')">Leaseholder Support</a>
+        <a onclick="showPage('services')">Housing Association Audits</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('testimonials')">Testimonials</a>
+        <a onclick="showPage('blog')">Blog</a>
+        <a onclick="showPage('faq')">FAQ</a>
+        <a onclick="showPage('contact')">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a id="footer-phone" href="#">0800 123 4567</a>
+        <a id="footer-email" href="#">enquiries@ews1.co.uk</a>
+        <a id="footer-address" href="#">London, UK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 EWS1 Ltd. All rights reserved. Registered in England & Wales.</p>
+      <div class="footer-badges">
+        <span class="footer-badge">RICS Regulated</span>
+        <span class="footer-badge">BSA Compliant</span>
+        <span class="footer-badge">ICO Registered</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="page-about" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">About EWS1</h1>
+    <p>UK specialists in fire safety built on expertise, integrity and commitment.</p>
+  </div>
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <span class="section-tag">Who We Are</span>
+        <h2 id="about-heading">Experts in External Wall Fire Safety Since 2020</h2>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1.5rem;" id="about-para1">EWS1 was founded in the immediate aftermath of the EWS1 form's introduction in December 2019.</p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1.5rem;" id="about-para2">Our founding team of RICS-qualified fire engineers recognised a sector in crisis and built EWS1 to be the most rigorous assessment service in the country.</p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:2rem;" id="about-para3">Today we have completed over 2,400 assessments across England, Scotland and Wales.</p>
+        <ul class="values-list" id="about-values">
+          <li><span class="icon">🎓</span><div><h4>Qualified Expertise</h4><p>Every assessment conducted by a RICS-regulated fire engineer.</p></div></li>
+          <li><span class="icon">🤝</span><div><h4>Transparent Process</h4><p>No hidden fees, no delays without explanation.</p></div></li>
+          <li><span class="icon">⚡</span><div><h4>Industry-Leading Speed</h4><p>Average 14-day turnaround without compromising rigour.</p></div></li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="about-visual-inner">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:white;margin-bottom:0.5rem;">Our Credentials</h3>
+          <ul class="credential-list" id="about-credentials">
+            <li><span class="check">✓</span> RICS Regulated Practice</li>
+            <li><span class="check">✓</span> Chartered Fire Engineers (IFE)</li>
+            <li><span class="check">✓</span> Professional Indemnity Insured</li>
+            <li><span class="check">✓</span> Building Safety Regulator Registered</li>
+            <li><span class="check">✓</span> UK-wide coverage</li>
+          </ul>
+          <div style="margin-top:2rem;padding:1.25rem;background:rgba(255,255,255,0.08);border-radius:12px;">
+            <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);">Registered address</p>
+            <p style="color:white;font-weight:600;margin-top:4px;" id="about-address">EWS1 Ltd, 20 Finsbury Street, London, EC2Y 9AQ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>© 2024 EWS1 Ltd.</p><button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button></div></footer>
+</div>
+
+<!-- SERVICES PAGE -->
+<div id="page-services" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Our Services</h1>
+    <p>End-to-end EWS1 and building fire safety services.</p>
+  </div>
+  <section style="background:var(--sky);">
+    <div class="services-grid" id="services-grid-page"><div class="loading">Loading services...</div></div>
+    <div style="text-align:center;margin-top:3rem;">
+      <button class="btn-primary" onclick="showPage('contact')">Get a Free Quote →</button>
+    </div>
+  </section>
+  <footer><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>© 2024 EWS1 Ltd.</p><button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button></div></footer>
+</div>
+
+<!-- BLOG PAGE -->
+<div id="page-blog" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">EWS1 Knowledge Hub</h1>
+    <p>Expert articles, guides and updates on EWS1 and building safety.</p>
+  </div>
+  <section>
+    <div class="blog-grid" id="blog-grid"><div class="loading">Loading blog posts...</div></div>
+  </section>
+  <footer><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>© 2024 EWS1 Ltd.</p><button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button></div></footer>
+</div>
+
+<!-- FAQ PAGE -->
+<div id="page-faq" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Frequently Asked Questions</h1>
+    <p>Answers to the most common questions about EWS1.</p>
+  </div>
+  <section style="background:var(--sky);">
+    <div class="faq-list" id="faq-list"><div class="loading">Loading FAQs...</div></div>
+    <div style="text-align:center;margin-top:3rem;">
+      <button class="btn-primary" onclick="showPage('contact')">Contact Our Team →</button>
+    </div>
+  </section>
+  <footer><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>© 2024 EWS1 Ltd.</p><button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button></div></footer>
+</div>
+
+<!-- TESTIMONIALS PAGE -->
+<div id="page-testimonials" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Client Testimonials</h1>
+    <p>Real stories from clients across the UK.</p>
+  </div>
+  <section style="background:var(--navy);">
+    <div class="testimonials-grid" id="testimonials-grid-page"><div class="loading" style="color:rgba(255,255,255,0.5);">Loading testimonials...</div></div>
+  </section>
+  <footer><div class="footer-bottom" style="border-top:none;padding-top:0;background:var(--navy);"><p style="color:rgba(255,255,255,0.5);">© 2024 EWS1 Ltd.</p><button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button></div></footer>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" style="display:none;">
+  <div class="inner-hero">
+    <h1 style="color:white;">Contact Us</h1>
+    <p>Free consultation — we respond within one working day.</p>
+  </div>
+  <section id="contact" style="background:var(--grey);">
+    <div class="contact-wrapper">
+      <div>
+        <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">Get in Touch</h3>
+        <p style="color:var(--muted);line-height:1.7;margin-bottom:2rem;">Our specialists are here to help. Fill in the form and we'll get back to you within 24 hours.</p>
+        <ul class="contact-items">
+          <li><span class="contact-icon">📧</span><div><strong>Email</strong><div style="color:var(--muted);font-size:0.9rem;" id="contact-email">enquiries@ews1.co.uk</div></div></li>
+          <li><span class="contact-icon">📞</span><div><strong>Phone</strong><div style="color:var(--muted);font-size:0.9rem;" id="contact-phone">0800 123 4567</div></div></li>
+          <li><span class="contact-icon">📍</span><div><strong>Office</strong><div style="color:var(--muted);font-size:0.9rem;" id="contact-address">20 Finsbury Street, London, EC2Y 9AQ</div></div></li>
+          <li><span class="contact-icon">🕐</span><div><strong>Hours</strong><div style="color:var(--muted);font-size:0.9rem;" id="contact-hours">Mon–Fri 9am–5:30pm</div></div></li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" id="fname" placeholder="John" /></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" id="lname" placeholder="Smith" /></div>
+        </div>
+        <div class="form-group"><label>Email Address *</label><input type="email" id="email" placeholder="john@example.com" /></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" id="phone" placeholder="07700 900000" /></div>
+        <div class="form-group"><label>Service Required</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option>EWS1 Assessment</option>
+            <option>Remediation Consultancy</option>
+            <option>Leaseholder Support</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message *</label><textarea id="message" placeholder="Please describe your requirements..."></textarea></div>
+        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <p style="font-size:0.8rem;color:var(--muted);text-align:center;margin-top:1rem;">🔒 Your data is never shared with third parties.</p>
+      </div>
+    </div>
+  </section>
+  <footer><div class="footer-bottom" style="border-top:none;padding-top:0;"><p>© 2024 EWS1 Ltd.</p><button class="btn-secondary" onclick="showPage('home')" style="padding:0.4rem 1.2rem;font-size:0.88rem;">← Back to Home</button></div></footer>
+</div>
+
+<script>
+const pages = ['home','about','services','blog','faq','testimonials','contact'];
+
+function showPage(id) {
+  pages.forEach(p => { document.getElementById('page-'+p).style.display = p === id ? 'block' : 'none'; });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState(null, '', '#' + id);
+  if (id === 'blog') loadBlog();
+  if (id === 'faq') loadFaq();
+  if (id === 'testimonials') loadTestimonials();
+}
+
+const hash = window.location.hash.replace('#','');
+if (pages.includes(hash)) showPage(hash);
+
+function toggleMobile() { document.getElementById('mobileNav').classList.toggle('open'); }
+function closeMobile() { document.getElementById('mobileNav').classList.remove('open'); }
+
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const chevron = btn.querySelector('.faq-chevron');
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+  if (!isOpen) { answer.classList.add('open'); chevron.classList.add('open'); }
+}
+
+function submitForm() {
+  const fname = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  if (!fname || !email || !message) { alert('Please fill in all required fields.'); return; }
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 4000);
+  document.getElementById('fname').value = '';
+  document.getElementById('lname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('message').value = '';
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.3)' : 'none';
+});
+
+// ── LOAD CMS DATA ──
+
+function renderStars(n) {
+  return '★'.repeat(n) + '☆'.repeat(5 - n);
+}
+
+// Load hero settings
+fetch('/_cms/hero.json')
+  .then(r => r.ok ? r.json() : null)
+  .then(d => {
+    if (!d) return;
+    if (d.badge) document.getElementById('hero-badge').textContent = d.badge;
+    if (d.headline1) document.getElementById('hero-h1').textContent = d.headline1;
+    if (d.headline2) document.getElementById('hero-h2').textContent = d.headline2;
+    if (d.subheading) document.getElementById('hero-sub').textContent = d.subheading;
+    if (d.btn_primary) document.getElementById('hero-btn-primary').textContent = d.btn_primary;
+    if (d.btn_secondary) document.getElementById('hero-btn-secondary').textContent = d.btn_secondary;
+    if (d.stat1_num) document.getElementById('stat1-num').innerHTML = d.stat1_num;
+    if (d.stat1_label) document.getElementById('stat1-label').textContent = d.stat1_label;
+    if (d.stat2_num) document.getElementById('stat2-num').innerHTML = d.stat2_num;
+    if (d.stat2_label) document.getElementById('stat2-label').textContent = d.stat2_label;
+    if (d.stat3_num) document.getElementById('stat3-num').innerHTML = d.stat3_num;
+    if (d.stat3_label) document.getElementById('stat3-label').textContent = d.stat3_label;
+  }).catch(() => {});
+
+// Load settings
+fetch('/_cms/settings.json')
+  .then(r => r.ok ? r.json() : null)
+  .then(d => {
+    if (!d) return;
+    if (d.footer_desc) document.getElementById('footer-desc').textContent = d.footer_desc;
+    if (d.phone) { document.getElementById('footer-phone').textContent = d.phone; document.getElementById('contact-phone').textContent = d.phone; }
+    if (d.email) { document.getElementById('footer-email').textContent = d.email; document.getElementById('contact-email').textContent = d.email; }
+    if (d.address) { document.getElementById('footer-address').textContent = d.address; document.getElementById('contact-address').textContent = d.address; }
+    if (d.hours) document.getElementById('contact-hours').textContent = d.hours;
+  }).catch(() => {});
+
+// Load CTA
+fetch('/_cms/cta.json')
+  .then(r => r.ok ? r.json() : null)
+  .then(d => {
+    if (!d) return;
+    if (d.headline) document.getElementById('cta-headline').textContent = d.headline;
+    if (d.subtext) document.getElementById('cta-sub').textContent = d.subtext;
+    if (d.btn) document.getElementById('cta-btn').textContent = d.btn;
+  }).catch(() => {});
+
+// Load about
+fetch('/_cms/about.json')
+  .then(r => r.ok ? r.json() : null)
+  .then(d => {
+    if (!d) return;
+    if (d.heading) document.getElementById('about-heading').textContent = d.heading;
+    if (d.para1) document.getElementById('about-para1').textContent = d.para1;
+    if (d.para2) document.getElementById('about-para2').textContent = d.para2;
+    if (d.para3) document.getElementById('about-para3').textContent = d.para3;
+    if (d.address) document.getElementById('about-address').textContent = d.address;
+    if (d.credentials && d.credentials.length) {
+      document.getElementById('about-credentials').innerHTML = d.credentials.map(c =>
+        `<li><span class="check">✓</span> ${c.item || c}</li>`).join('');
+    }
+  }).catch(() => {});
+
+// Load services
+function loadServices() {
+  const grids = ['services-grid', 'services-grid-page'];
+  fetch('/_cms/services/')
+    .then(r => r.ok ? r.json() : null)
+    .then(d => {
+      // fallback: try listing via GitHub API or just show defaults
+    }).catch(() => {});
+
+  // Try fetching each known service file
+  const serviceFiles = ['ews1-assessment','ews1-form-completion','remediation-consultancy','leaseholder-support','housing-association-audits','expert-witness-reports'];
+  const promises = serviceFiles.map(f =>
+    fetch(`/_cms/services/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+  );
+  Promise.all(promises).then(results => {
+    const services = results.filter(Boolean).sort((a,b) => (a.order||0) - (b.order||0));
+    if (services.length === 0) {
+      // Show default services
+      const defaults = [
+        { icon: '🔍', title: 'EWS1 Assessment', description: 'Full external wall system inspection by RICS-qualified fire engineers.', price: 'From: £950 + VAT' },
+        { icon: '📄', title: 'EWS1 Form Completion', description: 'Official EWS1 form completed to the latest RICS standard.', price: 'Included with assessment' },
+        { icon: '🏗️', title: 'Remediation Consultancy', description: 'Technical specification and contractor tendering support.', price: 'From: £1,500 + VAT' },
+        { icon: '⚖️', title: 'Leaseholder Support', description: 'Independent advice on rights under the Building Safety Act 2022.', price: 'From: £350 + VAT' },
+        { icon: '🏢', title: 'Housing Association Audits', description: 'Portfolio-wide EWS1 audits for registered providers.', price: 'POA' },
+        { icon: '📞', title: 'Expert Witness Reports', description: 'RICS-compliant expert witness reports for property disputes.', price: 'From: £2,500 + VAT' }
+      ];
+      const html = defaults.map(s => `
+        <div class="service-card">
+          <div class="service-icon">${s.icon}</div>
+          <h3>${s.title}</h3>
+          <p>${s.description}</p>
+          <p class="service-price"><strong>Price:</strong> ${s.price}</p>
+        </div>`).join('');
+      grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
+    } else {
+      const html = services.map(s => `
+        <div class="service-card">
+          <div class="service-icon">${s.icon || '🔧'}</div>
+          <h3>${s.title}</h3>
+          <p>${s.description}</p>
+          <p class="service-price"><strong>Price:</strong> ${s.price || 'Contact us'}</p>
+        </div>`).join('');
+      grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
+    }
+  });
+}
+
+// Load blog posts
+function loadBlog() {
+  const blogFiles = [
+    '2024-11-12-building-safety-act-2022',
+    '2024-10-03-ews1-ratings-explained',
+    '2024-09-22-building-safety-fund',
+    '2024-08-14-mortgage-without-ews1',
+    '2024-07-05-cladding-remediation-guide',
+    '2024-06-18-ews1-guide-first-time-buyers'
+  ];
+  const promises = blogFiles.map(f =>
+    fetch(`/_posts/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+  );
+  Promise.all(promises).then(results => {
+    const posts = results.filter(Boolean);
+    const grid = document.getElementById('blog-grid');
+    if (!grid) return;
+    if (posts.length === 0) {
+      grid.innerHTML = '<p style="color:var(--muted);text-align:center;grid-column:1/-1;">No blog posts yet. Add some from the CMS!</p>';
+      return;
+    }
+    grid.innerHTML = posts.map(p => `
+      <article class="blog-card">
+        <div class="blog-thumb">${p.emoji || '🏢'}</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-tag">${p.category || 'Guide'}</span><span>${p.read_time || '5 min read'}</span></div>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt || ''}</p>
+        </div>
+      </article>`).join('');
+  });
+}
+
+// Load FAQ
+function loadFaq() {
+  const faqFiles = ['what-is-ews1','which-buildings-need-ews1','ews1-ratings-explained','how-long-does-assessment-take','who-pays-for-ews1','how-much-does-ews1-cost','b2-rating-what-happens','lenders-accept-ews1'];
+  const promises = faqFiles.map(f =>
+    fetch(`/_faq/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+  );
+  Promise.all(promises).then(results => {
+    const faqs = results.filter(Boolean).sort((a,b) => (a.order||0) - (b.order||0));
+    const list = document.getElementById('faq-list');
+    if (!list) return;
+    if (faqs.length === 0) {
+      list.innerHTML = '<p style="color:var(--muted);text-align:center;">No FAQs yet. Add some from the CMS!</p>';
+      return;
+    }
+    list.innerHTML = faqs.map(f => `
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ${f.title}<span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer"><p>${f.answer}</p></div>
+      </div>`).join('');
+  });
+}
+
+// Load testimonials
+function loadTestimonials() {
+  const testFiles = ['sarah-r','james-t','priya-m','david-c','neelam-k','mark-l'];
+  const promises = testFiles.map(f =>
+    fetch(`/_testimonials/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+  );
+  Promise.all(promises).then(results => {
+    const tests = results.filter(Boolean);
+    const grids = ['testimonials-grid', 'testimonials-grid-page'];
+    if (tests.length === 0) {
+      const msg = '<p style="color:rgba(255,255,255,0.5);text-align:center;">No testimonials yet. Add some from the CMS!</p>';
+      grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = msg; });
+      return;
+    }
+    const html = tests.map(t => `
+      <div class="testimonial-card">
+        <div class="stars">${renderStars(t.rating || 5)}</div>
+        <p class="testimonial-text">"${t.text}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">${t.initials || '??'}</div>
+          <div><div class="author-name">${t.title}</div><div class="author-title">${t.author_title || ''}</div></div>
+        </div>
+      </div>`).join('');
+    grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
+  });
+}
+
+// Init
+loadServices();
+loadTestimonials();
+
+// Netlify Identity
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on('init', user => {
+    if (!user) {
+      window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
+    }
+  });
+}
+</script>
+</body>
+</html>
