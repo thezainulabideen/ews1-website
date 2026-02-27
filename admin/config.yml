@@ -1,62 +1,28 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
-publish_mode: editorial_workflow
-
 collections:
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "_posts"
+  - name: blog
+    label: Blog Posts
+    folder: _posts
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - label: "Category"
-        name: "category"
-        widget: "select"
-        options: ["Assessment", "Legislation", "Funding", "Mortgages", "Remediation", "Guide", "News"]
-      - { label: "Excerpt", name: "excerpt", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Published", name: "published", widget: "boolean", default: true }
-
-  - name: "services"
-    label: "Services"
-    folder: "_services"
+      - {label: Title, name: title, widget: string}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Body, name: body, widget: markdown}
+  - name: faq
+    label: FAQ
+    folder: _faq
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Icon (Emoji)", name: "icon", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Price", name: "price", widget: "string" }
-      - { label: "Order", name: "order", widget: "number", default: 1 }
-      - { label: "Active", name: "active", widget: "boolean", default: true }
-
-  - name: "faq"
-    label: "FAQ"
-    folder: "_faq"
+      - {label: Question, name: title, widget: string}
+      - {label: Answer, name: answer, widget: text}
+  - name: testimonials
+    label: Testimonials
+    folder: _testimonials
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Question", name: "title", widget: "string" }
-      - { label: "Answer", name: "answer", widget: "text" }
-      - { label: "Order", name: "order", widget: "number", default: 1 }
-      - { label: "Active", name: "active", widget: "boolean", default: true }
-
-  - name: "testimonials"
-    label: "Testimonials"
-    folder: "_testimonials"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Client Name", name: "title", widget: "string" }
-      - { label: "Role / Title", name: "author_title", widget: "string" }
-      - { label: "Initials (2 letters)", name: "initials", widget: "string" }
-      - { label: "Testimonial Text", name: "text", widget: "text" }
-      - { label: "Rating (1-5)", name: "rating", widget: "number", default: 5 }
-      - { label: "Active", name: "active", widget: "boolean", default: true }
+      - {label: Name, name: title, widget: string}
+      - {label: Text, name: text, widget: text}
