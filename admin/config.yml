@@ -8,71 +8,236 @@ public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 
 collections:
-
-  - name: "homepage"
-    label: "🏠 Home Page"
+  - name: homepage
+    label: Home Page
     files:
-      - name: "hero"
-        label: "Hero Section"
-        file: "_cms/hero.json"
+      - name: hero
+        label: Hero Section
+        file: _cms/hero.json
         fields:
-          - { label: "Badge Text", name: "badge", widget: "string" }
-          - { label: "Headline Line 1", name: "headline1", widget: "string" }
-          - { label: "Headline Line 2", name: "headline2", widget: "string" }
-          - { label: "Subheading", name: "subheading", widget: "text" }
-          - { label: "Primary Button", name: "btn_primary", widget: "string" }
-          - { label: "Secondary Button", name: "btn_secondary", widget: "string" }
-          - { label: "Stat 1 Number", name: "stat1_num", widget: "string" }
-          - { label: "Stat 1 Label", name: "stat1_label", widget: "string" }
-          - { label: "Stat 2 Number", name: "stat2_num", widget: "string" }
-          - { label: "Stat 2 Label", name: "stat2_label", widget: "string" }
-          - { label: "Stat 3 Number", name: "stat3_num", widget: "string" }
-          - { label: "Stat 3 Label", name: "stat3_label", widget: "string" }
-      - name: "cta"
-        label: "CTA Banner"
-        file: "_cms/cta.json"
+          - label: Badge Text
+            name: badge
+            widget: string
+          - label: Headline Line 1
+            name: headline1
+            widget: string
+          - label: Headline Line 2
+            name: headline2
+            widget: string
+          - label: Subheading
+            name: subheading
+            widget: text
+          - label: Primary Button
+            name: btn_primary
+            widget: string
+          - label: Secondary Button
+            name: btn_secondary
+            widget: string
+          - label: Stat 1 Number
+            name: stat1_num
+            widget: string
+          - label: Stat 1 Label
+            name: stat1_label
+            widget: string
+          - label: Stat 2 Number
+            name: stat2_num
+            widget: string
+          - label: Stat 2 Label
+            name: stat2_label
+            widget: string
+          - label: Stat 3 Number
+            name: stat3_num
+            widget: string
+          - label: Stat 3 Label
+            name: stat3_label
+            widget: string
+      - name: cta
+        label: CTA Banner
+        file: _cms/cta.json
         fields:
-          - { label: "Headline", name: "headline", widget: "string" }
-          - { label: "Subtext", name: "subtext", widget: "string" }
-          - { label: "Button Text", name: "btn", widget: "string" }
+          - label: Headline
+            name: headline
+            widget: string
+          - label: Subtext
+            name: subtext
+            widget: string
+          - label: Button Text
+            name: btn
+            widget: string
 
-  - name: "about"
-    label: "👤 About Page"
+  - name: about
+    label: About Page
     files:
-      - name: "about_content"
-        label: "About Content"
-        file: "_cms/about.json"
+      - name: about_content
+        label: About Content
+        file: _cms/about.json
         fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Paragraph 1", name: "para1", widget: "text" }
-          - { label: "Paragraph 2", name: "para2", widget: "text" }
-          - { label: "Paragraph 3", name: "para3", widget: "text" }
-          - { label: "Address", name: "address", widget: "string" }
-          - label: "Credentials"
-            name: "credentials"
-            widget: "list"
-            field: { label: "Item", name: "item", widget: "string" }
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Paragraph 1
+            name: para1
+            widget: text
+          - label: Paragraph 2
+            name: para2
+            widget: text
+          - label: Paragraph 3
+            name: para3
+            widget: text
+          - label: Address
+            name: address
+            widget: string
+          - label: Credentials
+            name: credentials
+            widget: list
+            field:
+              label: Item
+              name: item
+              widget: string
 
-  - name: "services"
-    label: "🔧 Services"
-    folder: "_cms/services"
+  - name: services
+    label: Services
+    folder: _cms/services
     create: true
     slug: "{{slug}}"
-    identifier_field: "title"
+    identifier_field: title
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Icon Emoji", name: "icon", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Price", name: "price", widget: "string" }
-      - { label: "Order", name: "order", widget: "number", default: 1 }
-      - { label: "Active", name: "active", widget: "boolean", default: true }
+      - label: Title
+        name: title
+        widget: string
+      - label: Icon Emoji
+        name: icon
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+      - label: Price
+        name: price
+        widget: string
+      - label: Order
+        name: order
+        widget: number
+        default: 1
+      - label: Active
+        name: active
+        widget: boolean
+        default: true
 
-  - name: "blog"
-    label: "📝 Blog Posts"
-    folder: "_posts"
+  - name: blog
+    label: Blog Posts
+    folder: _posts
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifier_field: "title"
+    identifier_field: title
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime"
+      - label: Title
+        name: title
+        widget: string
+      - label: Date
+        name: date
+        widget: datetime
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - Assessment
+          - Legislation
+          - Funding
+          - Mortgages
+          - Remediation
+          - Guide
+          - News
+      - label: Reading Time
+        name: read_time
+        widget: string
+        default: 5 min read
+      - label: Emoji
+        name: emoji
+        widget: string
+        default: "\U0001F3E2"
+      - label: Excerpt
+        name: excerpt
+        widget: text
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Published
+        name: published
+        widget: boolean
+        default: true
+
+  - name: faq
+    label: FAQ
+    folder: _faq
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - label: Question
+        name: title
+        widget: string
+      - label: Answer
+        name: answer
+        widget: text
+      - label: Order
+        name: order
+        widget: number
+        default: 1
+      - label: Active
+        name: active
+        widget: boolean
+        default: true
+
+  - name: testimonials
+    label: Testimonials
+    folder: _testimonials
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - label: Client Name
+        name: title
+        widget: string
+      - label: Role
+        name: author_title
+        widget: string
+      - label: Initials
+        name: initials
+        widget: string
+      - label: Rating
+        name: rating
+        widget: number
+        default: 5
+      - label: Testimonial
+        name: text
+        widget: text
+      - label: Active
+        name: active
+        widget: boolean
+        default: true
+
+  - name: settings
+    label: Site Settings
+    files:
+      - name: general
+        label: General Settings
+        file: _cms/settings.json
+        fields:
+          - label: Site Name
+            name: site_name
+            widget: string
+          - label: Phone
+            name: phone
+            widget: string
+          - label: Email
+            name: email
+            widget: string
+          - label: Address
+            name: address
+            widget: string
+          - label: Hours
+            name: hours
+            widget: string
+          - label: Footer Description
+            name: footer_desc
+            widget: text
