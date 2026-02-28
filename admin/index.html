@@ -5,24 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>EWS1 — Content Manager</title>
-  <script>
-    // Point to Netlify Identity on old Netlify site
-    window.netlifyIdentityWidget = {
-      APIUrl: "https://genuine-griffin-146c50.netlify.app/.netlify/identity"
-    };
-  </script>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <script>
+    // Set Netlify Identity URL before loading CMS
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'git-gateway',
+          branch: 'main',
+          identity_url: 'https://genuine-griffin-146c50.netlify.app/.netlify/identity',
+          gateway_url: 'https://genuine-griffin-146c50.netlify.app/.netlify/git'
+        },
+        media_folder: 'images/uploads',
+        public_folder: '/images/uploads',
+        publish_mode: 'editorial_workflow',
+        collections: []
+      }
+    });
+  </script>
 </body>
 </html>
-```
-
-Click **"Commit changes"**
-
----
-
-Wait **60 seconds** for Cloudflare to redeploy then go to:
-```
-https://ews1-website.pages.dev/admin/
