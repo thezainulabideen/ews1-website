@@ -3,10 +3,6 @@ backend:
   branch: main
   identity_url: https://genuine-griffin-146c50.netlify.app/.netlify/identity
   gateway_url: https://genuine-griffin-146c50.netlify.app/.netlify/git
-backend:
-  name: git-gateway
-  branch: main
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
