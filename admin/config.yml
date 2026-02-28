@@ -6,9 +6,7 @@ backend:
   auth_endpoint: api/auth
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
 publish_mode: editorial_workflow
-
 collections:
   - name: homepage
     label: Home Page
