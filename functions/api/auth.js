@@ -4,8 +4,10 @@ export async function onRequest(context) {
   const code = url.searchParams.get('code');
 
   if (!code) {
-    const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${env.GITHUB_CLIENT_ID}&scope=repo,user`;
-    return Response.redirect(githubAuthUrl, 302);
+    const githubAuthUrl = new URL('https://github.com/login/oauth/authorize');
+    githubAuthUrl.searchParams.set('client_id', env.GITHUB_CLIENT_ID);
+    githubAuthUrl.searchParams.set('scope', 'repo,user');
+    return Response.redirect(githubAuthUrl.toString(), 302);
   }
 
   const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
@@ -17,13 +19,19 @@ export async function onRequest(context) {
     body: JSON.stringify({
       client_id: env.GITHUB_CLIENT_ID,
       client_secret: env.GITHUB_CLIENT_SECRET,
-      code
+      code: code
     })
   });
 
   const data = await tokenResponse.json();
+
+  if (data.error) {
+    return new Response('OAuth error: ' + data.error_description, { status: 400 });
+  }
+
   const token = data.access_token;
   const provider = 'github';
+  const message = JSON.stringify({ token: token, provider: provider });
 
   const html = `<!DOCTYPE html>
 <html>
@@ -32,17 +40,21 @@ export async function onRequest(context) {
 <p>Authenticating, please wait...</p>
 <script>
 (function() {
+  var token = "${token}";
+  var provider = "${provider}";
+  var message = '{"token":"' + token + '","provider":"' + provider + '"}';
+
   function receiveMessage(e) {
-    console.log('received message', e);
     window.opener.postMessage(
-      'authorization:${provider}:success:${JSON.stringify({token, provider})}',
+      'authorization:' + provider + ':success:' + message,
       e.origin
     );
     window.removeEventListener('message', receiveMessage, false);
+    window.close();
   }
+
   window.addEventListener('message', receiveMessage, false);
-  console.log('sending authorizing message');
-  window.opener.postMessage('authorizing:${provider}', '*');
+  window.opener.postMessage('authorizing:' + provider, '*');
 })();
 </script>
 </body>
