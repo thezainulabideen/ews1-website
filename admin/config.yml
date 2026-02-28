@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: thezainulabideen/ews1-website
   branch: main
-  identity_url: https://genuine-griffin-146c50.netlify.app/.netlify/identity
-  gateway_url: https://genuine-griffin-146c50.netlify.app/.netlify/git
+  base_url: https://ews1-website.pages.dev
+  auth_endpoint: api/auth
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
