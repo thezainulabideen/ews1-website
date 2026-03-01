@@ -586,19 +586,35 @@ function parseMd(text) {
   if (!text) return obj;
   const match = text.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return obj;
-  match[1].split('\n').forEach(line => {
-    const colonIdx = line.indexOf(':');
-    if (colonIdx === -1) return;
-    const key = line.substring(0, colonIdx).trim();
-    let val = line.substring(colonIdx + 1).trim();
+  const lines = match[1].split('\n');
+  let currentKey = null;
+  let currentVal = '';
+  function saveKey() {
+    if (!currentKey) return;
+    let val = currentVal.trim();
     if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) val = val.slice(1, -1);
     if (val === 'true') val = true;
     else if (val === 'false') val = false;
     else if (!isNaN(val) && val !== '') val = Number(val);
-    obj[key] = val;
+    obj[currentKey] = val;
+  }
+  lines.forEach(line => {
+    if (line.match(/^  /) || line.match(/^\t/)) {
+      // Continuation of previous value (indented line)
+      currentVal += ' ' + line.trim();
+    } else {
+      saveKey();
+      const colonIdx = line.indexOf(':');
+      if (colonIdx === -1) { currentKey = null; return; }
+      currentKey = line.substring(0, colonIdx).trim();
+      currentVal = line.substring(colonIdx + 1).trim();
+    }
   });
+  saveKey();
   return obj;
 }
+
+
 
 function fetchMd(url) {
   return fetch(url).then(r => r.ok ? r.text() : null).then(t => t ? parseMd(t) : null).catch(() => null);
