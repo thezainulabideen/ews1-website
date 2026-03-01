@@ -324,7 +324,6 @@
       <div class="footer-col">
         <h4>Contact</h4>      
         <a id="footer-email" href="#">enquiries@ews1.co.uk</a>
-
       </div>
     </div>
     <div class="footer-bottom">
@@ -551,9 +550,7 @@ fetch('/_cms/settings.json')
   .then(d => {
     if (!d) return;
     if (d.footer_desc) document.getElementById('footer-desc').textContent = d.footer_desc;
-    if (d.phone) { document.getElementById('footer-phone').textContent = d.phone; document.getElementById('contact-phone').textContent = d.phone; }
     if (d.email) { document.getElementById('footer-email').textContent = d.email; document.getElementById('contact-email').textContent = d.email; }
-    if (d.address) { document.getElementById('footer-address').textContent = d.address; document.getElementById('contact-address').textContent = d.address; }
     if (d.hours) document.getElementById('contact-hours').textContent = d.hours;
   }).catch(() => {});
 
@@ -579,138 +576,116 @@ fetch('/_cms/about.json')
     if (d.address) document.getElementById('about-address').textContent = d.address;
     if (d.credentials && d.credentials.length) {
       document.getElementById('about-credentials').innerHTML = d.credentials.map(c =>
-        `<li><span class="check">✓</span> ${c.item || c}</li>`).join('');
+        '<li><span class="check">✓</span> ' + (c.item || c) + '</li>').join('');
     }
   }).catch(() => {});
+
+// ── MARKDOWN PARSER ──
+function parseMd(text) {
+  const obj = {};
+  if (!text) return obj;
+  const match = text.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return obj;
+  match[1].split('\n').forEach(line => {
+    const colonIdx = line.indexOf(':');
+    if (colonIdx === -1) return;
+    const key = line.substring(0, colonIdx).trim();
+    let val = line.substring(colonIdx + 1).trim();
+    if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) val = val.slice(1, -1);
+    if (val === 'true') val = true;
+    else if (val === 'false') val = false;
+    else if (!isNaN(val) && val !== '') val = Number(val);
+    obj[key] = val;
+  });
+  return obj;
+}
+
+function fetchMd(url) {
+  return fetch(url).then(r => r.ok ? r.text() : null).then(t => t ? parseMd(t) : null).catch(() => null);
+}
+
+function listFiles(folder) {
+  return fetch('https://api.github.com/repos/thezainulabideen/ews1-website/contents/' + folder)
+    .then(r => r.ok ? r.json() : [])
+    .then(files => Array.isArray(files) ? files.filter(f => f.name.endsWith('.md')).map(f => f.name.replace('.md', '')) : [])
+    .catch(() => []);
+}
 
 // Load services
 function loadServices() {
   const grids = ['services-grid', 'services-grid-page'];
-  fetch('/_cms/services/')
-    .then(r => r.ok ? r.json() : null)
-    .then(d => {
-      // fallback: try listing via GitHub API or just show defaults
-    }).catch(() => {});
-
-  // Try fetching each known service file
-  const serviceFiles = ['ews1-assessment','ews1-form-completion','remediation-consultancy','leaseholder-support','housing-association-audits','expert-witness-reports'];
-  const promises = serviceFiles.map(f =>
-    fetch(`/_cms/services/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
-  );
-  Promise.all(promises).then(results => {
-    const services = results.filter(Boolean).sort((a,b) => (a.order||0) - (b.order||0));
-    if (services.length === 0) {
-      // Show default services
-      const defaults = [
-        { icon: '🔍', title: 'EWS1 Assessment', description: 'Full external wall system inspection by RICS-qualified fire engineers.', price: 'Send Inquiry Now' },
-        { icon: '📄', title: 'EWS1 Form Completion', description: 'Official EWS1 form completed to the latest RICS standard.', price: 'Send Inquiry Now' },
-        { icon: '🏗️', title: 'Remediation Consultancy', description: 'Technical specification and contractor tendering support.', price: 'Send Inquiry Now' },
-        { icon: '⚖️', title: 'Leaseholder Support', description: 'Independent advice on rights under the Building Safety Act 2022.', price: 'Send Inquiry Now' },
-        { icon: '🏢', title: 'Housing Association Audits', description: 'Portfolio-wide EWS1 audits for registered providers.', price: 'Send Inquiry Now' },
-        { icon: '📞', title: 'Expert Witness Reports', description: 'RICS-compliant expert witness reports for property disputes.', price: 'Send Inquiry Now' }
-      ];
-      const html = defaults.map(s => `
-        <div class="service-card">
-          <div class="service-icon">${s.icon}</div>
-          <h3>${s.title}</h3>
-          <p>${s.description}</p>
-          <p class="service-price"><strong>Price:</strong> ${s.price}</p>
-        </div>`).join('');
+  const defaults = [
+    { icon: '🔍', title: 'EWS1 Assessment', description: 'Full external wall system inspection by RICS-qualified fire engineers.', price: 'Send Inquiry Now' },
+    { icon: '📄', title: 'EWS1 Form Completion', description: 'Official EWS1 form completed to the latest RICS standard.', price: 'Send Inquiry Now' },
+    { icon: '🏗️', title: 'Remediation Consultancy', description: 'Technical specification and contractor tendering support.', price: 'Send Inquiry Now' },
+    { icon: '⚖️', title: 'Leaseholder Support', description: 'Independent advice on rights under the Building Safety Act 2022.', price: 'Send Inquiry Now' },
+    { icon: '🏢', title: 'Housing Association Audits', description: 'Portfolio-wide EWS1 audits for registered providers.', price: 'Send Inquiry Now' },
+    { icon: '📞', title: 'Expert Witness Reports', description: 'RICS-compliant expert witness reports for property disputes.', price: 'Send Inquiry Now' }
+  ];
+  function renderServices(list) {
+    return list.map(s => '<div class="service-card"><div class="service-icon">' + (s.icon||'🔧') + '</div><h3>' + s.title + '</h3><p>' + (s.description||'') + '</p><p class="service-price"><strong>Price:</strong> ' + (s.price||'Contact us') + '</p></div>').join('');
+  }
+  listFiles('_cms/services').then(files => {
+    if (!files.length) {
+      const html = renderServices(defaults);
       grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
-    } else {
-      const html = services.map(s => `
-        <div class="service-card">
-          <div class="service-icon">${s.icon || '🔧'}</div>
-          <h3>${s.title}</h3>
-          <p>${s.description}</p>
-          <p class="service-price"><strong>Price:</strong> ${s.price || 'Contact us'}</p>
-        </div>`).join('');
-      grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
+      return;
     }
+    Promise.all(files.map(f => fetchMd('/_cms/services/' + f + '.md'))).then(results => {
+      const services = results.filter(Boolean).sort((a,b) => (a.order||0)-(b.order||0));
+      const html = renderServices(services.length ? services : defaults);
+      grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
+    });
   });
 }
 
 // Load blog posts
 function loadBlog() {
-  const blogFiles = [
-    '2024-11-12-building-safety-act-2022',
-    '2024-10-03-ews1-ratings-explained',
-    '2024-09-22-building-safety-fund',
-    '2024-08-14-mortgage-without-ews1',
-    '2024-07-05-cladding-remediation-guide',
-    '2024-06-18-ews1-guide-first-time-buyers'
-  ];
-  const promises = blogFiles.map(f =>
-    fetch(`/_posts/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
-  );
-  Promise.all(promises).then(results => {
-    const posts = results.filter(Boolean);
+  listFiles('_posts').then(files => {
     const grid = document.getElementById('blog-grid');
     if (!grid) return;
-    if (posts.length === 0) {
-      grid.innerHTML = '<p style="color:var(--muted);text-align:center;grid-column:1/-1;">No blog posts yet. Add some from the CMS!</p>';
-      return;
-    }
-    grid.innerHTML = posts.map(p => `
-      <article class="blog-card">
-        <div class="blog-thumb">${p.emoji || '🏢'}</div>
-        <div class="blog-body">
-          <div class="blog-meta"><span class="blog-tag">${p.category || 'Guide'}</span><span>${p.read_time || '5 min read'}</span></div>
-          <h3>${p.title}</h3>
-          <p>${p.excerpt || ''}</p>
-        </div>
-      </article>`).join('');
+    if (!files.length) { grid.innerHTML = '<p style="color:var(--muted);text-align:center;grid-column:1/-1;">No blog posts yet. Add some from the CMS!</p>'; return; }
+    Promise.all(files.map(f => fetchMd('/_posts/' + f + '.md'))).then(results => {
+      const posts = results.filter(Boolean).filter(p => p.published !== false);
+      if (!posts.length) { grid.innerHTML = '<p style="color:var(--muted);text-align:center;grid-column:1/-1;">No blog posts yet.</p>'; return; }
+      grid.innerHTML = posts.map(p => '<article class="blog-card"><div class="blog-thumb">' + (p.emoji||'🏢') + '</div><div class="blog-body"><div class="blog-meta"><span class="blog-tag">' + (p.category||'Guide') + '</span><span>' + (p.read_time||'5 min read') + '</span></div><h3>' + p.title + '</h3><p>' + (p.excerpt||'') + '</p></div></article>').join('');
+    });
   });
 }
 
 // Load FAQ
 function loadFaq() {
-  const faqFiles = ['what-is-ews1','which-buildings-need-ews1','ews1-ratings-explained','how-long-does-assessment-take','who-pays-for-ews1','how-much-does-ews1-cost','b2-rating-what-happens','lenders-accept-ews1'];
-  const promises = faqFiles.map(f =>
-    fetch(`/_faq/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
-  );
-  Promise.all(promises).then(results => {
-    const faqs = results.filter(Boolean).sort((a,b) => (a.order||0) - (b.order||0));
+  listFiles('_faq').then(files => {
     const list = document.getElementById('faq-list');
     if (!list) return;
-    if (faqs.length === 0) {
-      list.innerHTML = '<p style="color:var(--muted);text-align:center;">No FAQs yet. Add some from the CMS!</p>';
-      return;
-    }
-    list.innerHTML = faqs.map(f => `
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          ${f.title}<span class="faq-chevron">▼</span>
-        </button>
-        <div class="faq-answer"><p>${f.answer}</p></div>
-      </div>`).join('');
+    if (!files.length) { list.innerHTML = '<p style="color:var(--muted);text-align:center;">No FAQs yet. Add some from the CMS!</p>'; return; }
+    Promise.all(files.map(f => fetchMd('/_faq/' + f + '.md'))).then(results => {
+      const faqs = results.filter(Boolean).filter(f => f.active !== false).sort((a,b) => (a.order||0)-(b.order||0));
+      if (!faqs.length) { list.innerHTML = '<p style="color:var(--muted);text-align:center;">No FAQs yet.</p>'; return; }
+      list.innerHTML = faqs.map(f => '<div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">' + f.title + '<span class="faq-chevron">▼</span></button><div class="faq-answer"><p>' + f.answer + '</p></div></div>').join('');
+    });
   });
 }
 
 // Load testimonials
 function loadTestimonials() {
-  const testFiles = ['sarah-r','james-t','priya-m','david-c','neelam-k','mark-l'];
-  const promises = testFiles.map(f =>
-    fetch(`/_testimonials/${f}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
-  );
-  Promise.all(promises).then(results => {
-    const tests = results.filter(Boolean);
+  listFiles('_testimonials').then(files => {
     const grids = ['testimonials-grid', 'testimonials-grid-page'];
-    if (tests.length === 0) {
+    if (!files.length) {
       const msg = '<p style="color:rgba(255,255,255,0.5);text-align:center;">No testimonials yet. Add some from the CMS!</p>';
       grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = msg; });
       return;
     }
-    const html = tests.map(t => `
-      <div class="testimonial-card">
-        <div class="stars">${renderStars(t.rating || 5)}</div>
-        <p class="testimonial-text">"${t.text}"</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">${t.initials || '??'}</div>
-          <div><div class="author-name">${t.title}</div><div class="author-title">${t.author_title || ''}</div></div>
-        </div>
-      </div>`).join('');
-    grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
+    Promise.all(files.map(f => fetchMd('/_testimonials/' + f + '.md'))).then(results => {
+      const tests = results.filter(Boolean).filter(t => t.active !== false);
+      if (!tests.length) {
+        const msg = '<p style="color:rgba(255,255,255,0.5);text-align:center;">No testimonials yet.</p>';
+        grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = msg; });
+        return;
+      }
+      const html = tests.map(t => '<div class="testimonial-card"><div class="stars">' + renderStars(t.rating||5) + '</div><p class="testimonial-text">"' + t.text + '"</p><div class="testimonial-author"><div class="author-avatar">' + (t.initials||'??') + '</div><div><div class="author-name">' + t.title + '</div><div class="author-title">' + (t.author_title||'') + '</div></div></div></div>').join('');
+      grids.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = html; });
+    });
   });
 }
 
