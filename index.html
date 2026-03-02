@@ -698,16 +698,6 @@ function mdToHtml(md) {
   return html;
 }
   
- // Wrap paragraphs
-    html = html.split('\n\n').map(block => {
-      block = block.trim();
-      if (!block) return '';
-      if (block.match(/^<(h[1-6]|ul|ol|hr|blockquote)/)) return block;
-      return '<p>' + block.replace(/\n/g, ' ') + '</p>';
-    }).join('\n');
-    return html;
-  }
-
 // ── OPEN BLOG POST ──
 function openPost(slug) {
   fetch('/_posts/' + slug + '.md').then(r => r.ok ? r.text() : null).then(text => {
