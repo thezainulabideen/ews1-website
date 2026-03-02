@@ -534,7 +534,7 @@ const pages = ['home','about','services','blog','post','faq','testimonials','con
 function showPage(id) {
   pages.forEach(p => { document.getElementById('page-'+p).style.display = p === id ? 'block' : 'none'; });
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  if (id !== 'post') history.pushState(null, '', '#' + id);
+ if (id !== 'post') history.pushState(null, '', '/' + id);
   if (id === 'blog') loadBlog();
   if (id === 'faq') loadFaq();
   if (id === 'testimonials') loadTestimonials();
