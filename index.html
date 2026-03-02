@@ -565,16 +565,44 @@ function toggleFaq(btn) {
 
 function submitForm() {
   const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
   const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
   const message = document.getElementById('message').value.trim();
   if (!fname || !email || !message) { alert('Please fill in all required fields.'); return; }
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
-  document.getElementById('fname').value = '';
-  document.getElementById('lname').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('message').value = '';
+
+  const data = {
+    access_key: '1f6f5ef1-0f6f-4fec-a2b5-56c6fb2cc7ad',
+    name: fname + ' ' + lname,
+    email: email,
+    phone: phone,
+    service: service,
+    message: message,
+    subject: 'New EWS1 Enquiry from ' + fname + ' ' + lname
+  };
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(r => r.json())
+  .then(result => {
+    if (result.success) {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+      document.getElementById('fname').value = '';
+      document.getElementById('lname').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('message').value = '';
+    } else {
+      alert('Something went wrong. Please try again or email us directly.');
+    }
+  })
+  .catch(() => { alert('Something went wrong. Please try again or email us directly.'); });
 }
 
 window.addEventListener('scroll', () => {
