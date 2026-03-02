@@ -681,13 +681,22 @@ function fetchMd(url) {
   return fetch(url).then(r => r.ok ? r.text() : null).then(t => t ? parseMd(t) : null).catch(() => null);
 }
 
+const FILE_MANIFEST = {
+  '_posts': ['what-is-ews1'],
+  '_testimonials': ['testimonial-01','testimonial-02','testimonial-03','testimonial-04','testimonial-05','testimonial-06','testimonial-07','testimonial-08','testimonial-09','testimonial-10'],
+  '_faq': ['faq-01','faq-02','faq-03','faq-04','faq-05','faq-06','faq-07','faq-08','faq-09','faq-10','faq-11','faq-12'],
+  '_cms/services': []
+};
+
 function listFiles(folder) {
+  if (FILE_MANIFEST[folder] !== undefined && FILE_MANIFEST[folder].length > 0) {
+    return Promise.resolve(FILE_MANIFEST[folder]);
+  }
   return fetch('https://api.github.com/repos/thezainulabideen/ews1-website/contents/' + folder)
     .then(r => r.ok ? r.json() : [])
     .then(files => Array.isArray(files) ? files.filter(f => f.name.endsWith('.md')).map(f => f.name.replace('.md','')) : [])
     .catch(() => []);
 }
-
 
 
 // ── MARKDOWN TO HTML RENDERER ──
