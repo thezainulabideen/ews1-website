@@ -667,6 +667,7 @@ function listFiles(folder) {
 // ── MARKDOWN TO HTML RENDERER ──
 function mdToHtml(md) {
   if (!md) return '';
+  md = md.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
   // Convert headings and structure FIRST before any escaping
   let html = md
     .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
