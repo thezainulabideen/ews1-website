@@ -722,8 +722,10 @@ function openPost(slug) {
     document.getElementById('post-category').textContent = post.category || 'Guide';
     document.getElementById('post-read-time').textContent = post.read_time || '5 min read';
     document.getElementById('post-date').textContent = post.date ? new Date(post.date).toLocaleDateString('en-GB', {day:'numeric',month:'long',year:'numeric'}) : '';
-    document.getElementById('post-body').innerHTML = mdToHtml(post._body || '');
+
+document.getElementById('post-body').innerHTML = mdToHtml(post._body || '');
     showPage('post');
+    history.pushState(null, '', '/blog/' + slug);
   }).catch(() => {});
 }
 
