@@ -541,8 +541,32 @@ function showPage(id) {
 }
 
 const path = window.location.pathname.replace('/', '').replace('.html', '') || 'home';
-if (['home','about','services','blog','faq','testimonials','contact'].includes(path)) showPage(path);
-else showPage('home');
+if (['home','about','services','blog','faq','testimonials','contact'].includes(path)) {
+  showPage(path);
+} else if (path.startsWith('blog/')) {
+  const slug = path.replace('blog/', '');
+  loadBlog();
+  openPost(slug);
+} else {
+  showPage('home');
+}
+```
+
+---
+
+### Change 3 — Update `_redirects` file
+
+**Find:**
+```
+/blog         /index.html   200
+```
+
+**Replace with:**
+```
+/blog         /index.html   200
+/blog/*       /index.html   200
+
+  
 
 function toggleMobile() { document.getElementById('mobileNav').classList.toggle('open'); }
 function closeMobile() { document.getElementById('mobileNav').classList.remove('open'); }
