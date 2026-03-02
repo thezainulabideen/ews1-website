@@ -690,14 +690,14 @@ function mdToHtml(md) {
     return '<ol>' + items + '</ol>';
   });
   // Wrap paragraphs
-  html = html.split('\n\n').map(block => {
+html = html.split('\n\n').map(block => {
     block = block.trim();
     if (!block) return '';
     if (block.match(/^<(h[1-6]|ul|ol|hr|blockquote)/)) return block;
+    // Check if block contains heading tags mixed with text
+    if (block.match(/<h[1-6]/)) return block;
     return '<p>' + block.replace(/\n/g, ' ') + '</p>';
   }).join('\n');
-  return html;
-}
   
 // ── OPEN BLOG POST ──
 function openPost(slug) {
