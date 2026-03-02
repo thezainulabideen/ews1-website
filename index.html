@@ -540,8 +540,9 @@ function showPage(id) {
   if (id === 'testimonials') loadTestimonials();
 }
 
-const hash = window.location.hash.replace('#','');
-if (['home','about','services','blog','faq','testimonials','contact'].includes(hash)) showPage(hash);
+const path = window.location.pathname.replace('/', '').replace('.html', '') || 'home';
+if (['home','about','services','blog','faq','testimonials','contact'].includes(path)) showPage(path);
+else showPage('home');
 
 function toggleMobile() { document.getElementById('mobileNav').classList.toggle('open'); }
 function closeMobile() { document.getElementById('mobileNav').classList.remove('open'); }
