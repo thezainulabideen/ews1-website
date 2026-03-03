@@ -1,7 +1,10 @@
+https://ews1-website.pages.dev/* https://ews1.co.uk/:splat 301
+
 /home         /index.html   200
 /about        /index.html   200
 /services     /index.html   200
 /blog         /index.html   200
+/blog/*       /index.html   200
 /faq          /index.html   200
 /testimonials /index.html   200
 /contact      /index.html   200
