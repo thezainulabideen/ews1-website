@@ -2,7 +2,7 @@ backend:
   name: github
   repo: thezainulabideen/ews1-website
   branch: main
-  base_url: https://ews1-website.pages.dev
+  base_url: https://ews1.co.uk
   auth_endpoint: api/auth
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
